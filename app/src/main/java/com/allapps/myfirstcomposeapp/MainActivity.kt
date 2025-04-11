@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.allapps.myfirstcomposeapp.components.layout.MyBox
+import com.allapps.myfirstcomposeapp.components.layout.MyColumn
 import com.allapps.myfirstcomposeapp.login.Greeting
 import com.allapps.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                   MyBox()
+                   MyColumn(Modifier.padding(innerPadding))
                 }
             }
         }
