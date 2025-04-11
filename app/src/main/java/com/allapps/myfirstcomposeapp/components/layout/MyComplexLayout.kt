@@ -35,7 +35,6 @@ fun MyComplexLayout(modifier: Modifier) {
                         .weight(1f)
                         .height(80.dp)
                         .background(Color.Green),
-                    contentAlignment = Alignment.Center
                 ) {
                     Text("Hola111")
                 }
