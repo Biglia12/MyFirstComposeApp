@@ -10,7 +10,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.allapps.myfirstcomposeapp.components.layout.exercicise2constraint.MyExerciseConstraint
+import com.allapps.myfirstcomposeapp.components.layout.ConstrainChain
+import com.allapps.myfirstcomposeapp.components.layout.ConstraintBarrier
+import com.allapps.myfirstcomposeapp.components.layout.ConstraintExampleGuide
 import com.allapps.myfirstcomposeapp.login.Greeting
 import com.allapps.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 
@@ -21,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                    MyExerciseConstraint(Modifier.padding(innerPadding))
+                    ConstrainChain(Modifier.padding(innerPadding))
                 }
             }
         }
@@ -36,7 +38,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }*/
 
-@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true, showSystemUi = true) //esto peudo modificarlo para previsualizar pero no cambia nada en la view
 @Composable
 fun GreetingPreview() {
     MyFirstComposeAppTheme {
