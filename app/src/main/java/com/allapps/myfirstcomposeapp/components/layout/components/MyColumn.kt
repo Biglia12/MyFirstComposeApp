@@ -1,4 +1,4 @@
-package com.allapps.myfirstcomposeapp.components.layout
+package com.allapps.myfirstcomposeapp.components.layout.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
