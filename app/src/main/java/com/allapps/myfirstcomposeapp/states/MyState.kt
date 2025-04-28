@@ -10,11 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
@@ -29,9 +26,8 @@ fun MyState(modifier: Modifier) {
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.Top,
     ) {
-        Text("Pulsame: ${number}", modifier = modifier.clickable { number += 1 })
-        Text("Pulsame:", modifier = modifier.clickable { number += 1 })
-        Text("Pulsame:${number}", modifier = modifier.clickable { number += 1 })
+        StateExample1(number){ number += 1 }//puede hacerse de esta manera cuando es lambda es el ultimo parametro
+        StateExample2(number, onClick = { number += 1 })
     }
 
 }
@@ -39,11 +35,10 @@ fun MyState(modifier: Modifier) {
 
 @Composable
 fun StateExample1(number: Int, onClick: () -> Unit) {
-
-    Text("Púlsame: $number", modifier = Modifier.clickable { })
+    Text("Púlsame: $number", modifier = Modifier.clickable { onClick() })
 }
 
 @Composable
 fun StateExample2(number: Int, onClick: () -> Unit) {
-    Text("Púlsame: $number", modifier = Modifier.clickable { })
+    Text("Púlsame: $number", modifier = Modifier.clickable { onClick() })
 }
