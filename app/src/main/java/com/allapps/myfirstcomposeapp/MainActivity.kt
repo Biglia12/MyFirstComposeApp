@@ -10,8 +10,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.allapps.myfirstcomposeapp.components.MyTexts
 import com.allapps.myfirstcomposeapp.login.Greeting
-import com.allapps.myfirstcomposeapp.states.MyState
 import com.allapps.myfirstcomposeapp.ui.theme.MyFirstComposeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyFirstComposeAppTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                    MyState(Modifier.padding(innerPadding))
+                    MyTexts(Modifier.padding(innerPadding))
                 }
             }
         }

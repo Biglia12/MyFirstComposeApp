@@ -1,4 +1,4 @@
-package com.allapps.myfirstcomposeapp.components.layout.components
+package com.allapps.myfirstcomposeapp.components.layout
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
