@@ -26,8 +26,8 @@ fun MyState(modifier: Modifier) {
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.Top,
     ) {
-        StateExample1(number){ number += 1 }//puede hacerse de esta manera cuando es lambda es el ultimo parametro
-        StateExample2(number, onClick = { number += 1 })
+        StateExample1(number) { number += 1 }//puede hacerse de esta manera cuando es lambda es el ultimo parametro
+        StateExample2(number = number, onClick = { number += 1 })
     }
 
 }
